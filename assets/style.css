@@ -1,29 +1,35 @@
 :root{
-    --primary: ;
-    --secondary: ;
-    --tertiary: ;
-    --light: ;
-    --dark: ;
+    --primary: #6A9C89;
+    --secondary: #16423C;
+    --tertiary: #C4DAD2 ;
+    --light: #e9e9e9;
+    --dark: rgb(44, 44, 44) ;
 }
 
 * {
     font-family: sans-serif;
+    
 }
 
 body {
-    border: 1px solid limegreen;
     width: 100%;
+    height: 100%;
+    background-color: var(--light);
+
 }
 
 header {
     position: relative;
-    border: 1px solid;
-    height: 23vh
+    height: 23vh;
+    width: 100%;
+    display: flex;
+    background-color: var(--secondary);
+    color: var(--light);
+    border-bottom: 7px solid var(--primary)
 }
 
 nav {
     position: absolute;
-    border: 1px solid;
     height: 40%;
     width: 50%;
     right: 0%;
@@ -33,7 +39,7 @@ nav {
 }
 
 nav ul {
-    border: 1px solid;
+
     display: flex;
     align-items: center;
     height: 100%;
@@ -41,40 +47,55 @@ nav ul {
 }
 
 
-nav ul li {
-    border: 1px solid;
+nav ul a {
     display: inline;
     font-size: 150%;
-    flex: 1 1 auto
+    flex: 1 1 auto;
+    text-decoration: 5px underline var(--light);
+    text-underline-offset: 10px;
+    color: var(--light);
+}
+
+ul a:visited {
+    text-decoration: 5px underline var(--light);
+    text-underline-offset: 10px;
+    color: var(--light);
 }
 
 header span {
     position: absolute;
-    border: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 5px solid;
     top: 30%;
     font-size: 8vh;
     padding: 10px 10px 10px 70px;
+    flex: 1 1 auto;
 }
 
 .cover{
     position: relative;
-    border: 1px solid;
+    border-bottom: 5px solid var(--primary);
     height: 46vh;
- 
+    background-image: url(./green-bg2.jpg);
+    background-position: -10px;
+    background-size: 1800px;
 }
 
 #subtitle {
     position: absolute;
     border: 1px solid;
+    border-bottom: 3px solid;
     right: 10%;
     bottom: 15%;
     padding: 10px 5px;
     font-size: 180%;
+    color: var(--light);
 }
 
-.card {
+.sect {
     position: relative;
-    border-left: 1px solid;
+    border-left: 5px solid var(--secondary);
     margin: 70px;
     padding-left: 30px;
     width: 66%;
@@ -82,8 +103,10 @@ header span {
 }
 
 
+
 .about-me {
     height: 30vh;
+    color: var(--dark)
 }
 
 .about-me::before {
@@ -92,11 +115,15 @@ header span {
     position: absolute;
     display: inline-block;
     left: -210px;
-    width: 12vw
+    width: 12vw;
+    color: var(--secondary);
 }
 
 .my-work {
-    height: 150vh
+    height: 150vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .my-work::before {
@@ -105,11 +132,116 @@ header span {
     position: absolute;
     display: inline-block;
     left: -190px;
-    width: 12vw
+    width: 12vw;
+    color: var(--secondary)
 }
 
+
+.card {
+    position: relative;
+    border: 5px solid var(--primary);
+    flex: 1 1 auto;
+    min-width: 48%;
+    margin-top: 2%;
+    background-color: var(--primary) ;
+    background-blend-mode:soft-light;
+}
+
+
+
+.card:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+ .led-wall {
+    position: relative;
+    flex: 10 1 500px;
+    min-width: 100%;
+    min-height: 50%;
+    background-image: url(./rps-1.jpg);
+    background-image: center;
+    background-size: 800px;
+    background-position: 120px;
+}
+
+.react-calc {
+    background-image: url(./laptop-2.jpg);
+    background-size: 600px;
+    background-position: top 580px right 0px;
+}
+
+.surf-report {
+    background-image: url(./cart.jpg);
+    background-size: 550px;
+    background-position: top -50px left 0px;
+}
+
+.pastel-puzzles {
+    background-image: url(./calculator.jpg);
+    background-size: 600px;
+    background-position: top 310px left -50px;
+}
+
+.run-buddy {
+    background-image: url(./todo.jpg);
+    background-size: 600px;
+    background-position: top 310px left -50px;
+}
+
+.title-1 {
+    border: 10px solid var(--primary);
+    position: absolute;
+    bottom: 10%;
+    font-size: 200%;
+    line-height: 1.6;
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.title-1 p {
+    font-size: 50%;
+}
+
+
+
+.title-2 {
+    border: 10px solid var(--primary);
+    position: absolute;
+    bottom: 10%;
+    font-size: 200%;
+    line-height: 1.6;
+    background-color: var(--primary);
+    color: var(--dark)
+}
+
+.title-2 p {
+    font-size: 50%;
+}
+
+
+.react-calc,
+.surf-report {
+    margin-right: 2% 
+}
+
+
 .contact-me {
-    height: 30vh
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-me a {
+    text-decoration: underline 5px;
+    font-size: 150%;
+    color: var(--secondary)
+}
+
+.contact-me a:visited {
+    text-decoration: underline 5px;
+    font-size: 150%;
+    color: var(--secondary)
 }
 
 .contact-me::before {
@@ -118,7 +250,114 @@ header span {
     position: absolute;
     display: inline-block;
     left: -275px;
-    width: 12vw
+    width: 12vw;
+    color: var(--secondary);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--secondary);
+    padding: 10px;
+    border-top: var(--primary) 3px solid;
+    color: var(--light)
+}
+
+@media screen and (max-width: 980px){
+    header {
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header span {
+        position: relative;
+        flex: 1 1 auto;
+        max-width: fit-content;
+
+        border: 1px solid;
+        top: 5%;
+        font-size: 200%;
+        padding: 10px 10px 1px 10px;
+        text-align: center;
+    }
+
+    header nav {
+        position: relative;
+        flex: 1 1 auto;
+        height: 40%;
+        width: 50%;
+        right: 0%;
+        top: 0%;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .about-me::before {
+        content: 'About Me';
+        font-size: 8vh;
+        position: absolute;
+        display: inline-block;
+        left: -150px;
+        width: 12vw
+    }
+
+    .my-work::before {
+        content: 'My Work';
+        font-size: 8vh;
+        position: absolute;
+        display: inline-block;
+        left: -140px;
+        width: 12vw
+    }
+
+    .contact-me::before {
+        content: 'Contact Me';
+        font-size: 8vh;
+        position: absolute;
+        display: inline-block;
+        left: -180px;
+        width: 12vw
+    }
+
+    .title-2 {
+        max-width: 50%;
+        max-height: 50%;
+        font-size: 100%;
+        line-height: 1.2;
+        border: 5px solid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        border: 1px solid;
+        height: fit-content;
+        display: flex;
+    }
+
+    nav ul {
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        flex-flow: column wrap;
+    }
+    
+    
+    nav ul li {
+        display: inline;
+        font-size: 100%;
+        flex: 1 1 auto;
+        margin-top: 15px;
+    }
+
+    #resume {
+        margin-bottom: 15px
+    }
 }
 
 
